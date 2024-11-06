@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Recommendations</title>
+</head>
+<body>
+       <div class="content">
+        <h1><u>Movie Recommendation System</u></h1>
+        <p>YEAH !!!! You heard it right ! This is a page where you can find the best movie
+        suggestions based on your interest . We are here to suggest you with the best movies that you can
+        watch next . If you are a person who are interested in watching movies , then this is a
+        perfect spot for you to discover a wide range of movie suggestions . <br>
+        All you need to do is just enter your favourite movie name or your fav genre <br>
+        Then wait for the magic to happen !!!!</p>
+        <form method="POST">
+            <label for="movie_title">Enter a movie title:</label><br>
+            <input type="text" id="movie_title" name="movie_title" required>
+            <input type="submit" value="Get Recommendations">
+        </form>
+           </div>
+        <div class="container">
+        {% if recommendations %}
+            <h2><u>Recommended Movies:</u></h2>
+            <ul>
+                {% for movie in recommendations %}
+                    <li>{{ movie }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+       </div>
+</body>
+<style>
+    .content {
+    text-align : center;
+    }
+    body {
+    background-color : black;
+    font-size : 22px;
+    color : white;
+    }
+    h1 {
+    color : gold;
+    }
+    .container {
+    align : center;
+    font-size : 26px;
+    }
+    h2 {
+    color : yellow;
+    }
+</style>
+</html>
